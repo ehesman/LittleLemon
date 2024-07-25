@@ -17,5 +17,6 @@ class Menu(models.Model):
    price = models.DecimalField(max_digits = 5, decimal_places = 2) 
    inventory = models.IntegerField() 
 
-   def __str__(self):
-      return self.title
+   #def __str__(self): 
+   def get_item(self):
+      return f'{self.title} : {str(self.price)}'
